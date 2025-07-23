@@ -1,7 +1,7 @@
 # CS50's Introduction to Databases with SQL
 This is my solutions to the problem sets.
 ## Week 0 Querying
-### Cyberchase ![Cyberchase](Problem_Set_0/cyberchase/)
+### [Cyberchase](Problem_Set_0/cyberchase/)
 For each of the following questions, you should write a single SQL query that outputs the results specified by each problem. Your response must take the form of a single SQL query. You should not assume anything about the ids of any particular episodes: your queries should be accurate even if the id of any particular episode were different. Finally, each query should return only the data necessary to answer the question: if the problem only asks you to output the names of episodes, for example, then your query should not also output each episodes’s air date.
 
 - In `1.sql`, write a SQL query to list the titles of all episodes in Cyberchase’s original season, Season 1.  
@@ -28,7 +28,7 @@ You can optionally attempt the below queries, which may require some advanced kn
 2. Write a SQL query to find, for each year, the first day of the year that PBS released a Cyberchase episode.  
     - Your query should output a table with two columns, one for the year and one for the earliest month and day an episode was released that year.
 
-### 36 Views ![Cyberchase](Problem_Set_0/views/)
+### [36 views](Problem_Set_0/views/)
 For each of the following questions, you should write a single SQL query that outputs the results specified by each problem. Your response must take the form of a single SQL query. You should not assume anything about the ids of any particular observations: your queries should be accurate even if the id of any particular observation were different. Finally, each query should return only the data necessary to answer the question.
 
 - In `1.sql`, write a SQL query that a translator might take interest in: list, side by side, the Japanese title and the English title for each print. Ensure the Japanese title is the first column, followed by the English title.
@@ -45,7 +45,7 @@ For each of the following questions, you should write a single SQL query that ou
   - Involve at least one condition, using `WHERE`  
   - Sort by at least one column, using `ORDER BY`  
 
-### Normals ![Cyberchase](Problem_Set_0/normals/)
+### [Normals](Problem_Set_0/normals/)
 For each of the following questions, you should write a single SQL query that outputs the results specified by each problem. Your response must take the form of a single SQL query. You should not assume anything about the ids of any particular observations: your queries should be accurate even if the id of any particular observation were different. Finally, each query should return only the data necessary to answer the question.
 
 - In `1.sql`, write a SQL query to find the normal ocean surface temperature in the Gulf of Maine, off the coast of Massachusetts. To find this temperature, look at the data associated with 42.5° of latitude and -69.5° of longitude.
@@ -66,7 +66,7 @@ The deepest sensor records temperatures at 225 meters of depth, so you can find 
 - In `9.sql`, write a SQL query to find the 10 locations with the highest normal ocean surface temperature, sorted warmest to coldest. If two locations have the same normal ocean surface temperature, sort by latitude, smallest to largest. Include latitude, longitude, and surface temperature columns.
 - There are 180 whole degrees of latitude. In `10.sql`, write a SQL query to determine how many points of latitude we have at least one data point for. (Why might we not have data points for all latitudes?)
 
-### Players ![Cyberchase](Problem_Set_0/players/)
+### [Players](Problem_Set_0/players/)
 - In `1.sql`, write a SQL query to find the hometown (including city, state, and country) of Jackie Robinson.
 - In `2.sql`, write a SQL query to find the side (e.g., right or left) Babe Ruth hit.
 - In `3.sql`, write a SQL query to find the ids of rows for which a value in the column `debut` is missing.
