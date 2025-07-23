@@ -2,60 +2,20 @@
 This is my solutions to the problem sets.
 ## Week 0 Querying
 ### - [Cyberchase](Problem_Set_0/cyberchase/)
+Welcome to Cyberspace! Cyberchase is an animated, educational kid’s television series, aired by the United States’ Public Broadcasting Service (PBS) since 2002. Originally designed to “show kids that math is everywhere and everyone can be good at it,” the world of Cyberchase centers on Jackie, Matt, and Inez as they team up with Digit—a “cybird”—to stop Hacker from taking over Cyberspace and infecting Motherboard. Along the way, the quartet learn math, science, and problem-solving skills to thwart Hacker in his attempts.
 
+In a database called `cyberchase.db`, using a table called `episodes`, chase answers to PBS’s questions about Cyberchase’s episodes thus far.
 ### [36 views](Problem_Set_0/views/)
-For each of the following questions, you should write a single SQL query that outputs the results specified by each problem. Your response must take the form of a single SQL query. You should not assume anything about the ids of any particular observations: your queries should be accurate even if the id of any particular observation were different. Finally, each query should return only the data necessary to answer the question.
+From 1830 to 1832, the Japanese artist Katsushika Hokusai created 36 woodblock prints depicting 36 different views of Mount Fuji, a volcano on the Honshū island of Japan. Among the series’ most famous works are Fine Wind, Clear Morning and The Great Wave off Kanagawa. The prints became so influential that another Japanese artist of the time period—Utagawa Hiroshige—created his own series of 36 prints, each depicting a new view of Fuji.
 
-- In `1.sql`, write a SQL query that a translator might take interest in: list, side by side, the Japanese title and the English title for each print. Ensure the Japanese title is the first column, followed by the English title.
-- In `2.sql`, write a SQL query to list the average colors of prints by Hokusai that include “river” in the English title. (As an aside, do they have any hint of blue?)
-- In `3.sql`, write a SQL query to count how many prints by Hokusai include “Fuji” in the English title. Though all of Hokusai’s prints focused on Mt. Fuji, in how many did “Fuji” make it into the title?
-- In `4.sql`, write a SQL query to count how many prints by Hiroshige have English titles that refer to the “Eastern Capital”. Hiroshige’s prints were created in Japan’s “Edo period,” referencing the eastern capital city of Edo, now Tokyo.
-- In `5.sql`, write a SQL query to find the highest contrast value of prints by Hokusai. Name the column “Maximum Contrast”. Does Hokusai’s prints most contrasting print actually have much contrast?
-- In `6.sql`, write a SQL query to find the average entropy of prints by Hiroshige, rounded to two decimal places. Call the resulting column “Hiroshige Average Entropy”.
-- In `7.sql`, write a SQL query to list the English titles of the 5 brightest prints by Hiroshige, from most to least bright. Compare them to this list on Wikipedia to see if your results match the print’s aesthetics.
-- In `8.sql`, write a SQL query to list the English titles of the 5 prints with the least contrast by Hokusai, from least to highest contrast. Compare them to this list on Wikipedia to see if your results match the print’s aesthetics.
-- In `9.sql`, write a SQL query to find the English title and artist of the print with the highest brightness.
-- In `10.sql`, write a SQL query to answer a question of your choice about the prints. The query should:
-  - Make use of `AS` to rename a column
-  - Involve at least one condition, using `WHERE`  
-  - Sort by at least one column, using `ORDER BY`  
+In `views.db`, you’ll find details on the 36 prints created, respectively, by Hokusai and Hiroshige. In total, you’ll have data on 72 prints. Prints like these tend to be appreciated for their aesthetics, not their statistics, but computer science now helps create additional numeric insights about artwork. In addition to each print’s title and author, you’ll find some statistics commonly used in computational image analysis: the print’s average color, its brightness, its contrast, and its entropy. In the accompanying `.sql` files, write SQL queries to answer questions about this database of 72 prints and the statistics about their composition.
 
 ### [Normals](Problem_Set_0/normals/)
-For each of the following questions, you should write a single SQL query that outputs the results specified by each problem. Your response must take the form of a single SQL query. You should not assume anything about the ids of any particular observations: your queries should be accurate even if the id of any particular observation were different. Finally, each query should return only the data necessary to answer the question.
+How do we know whether ocean temperatures are lower or higher than “normal”? What’s a “normal” temperature? Turns out that scientists have developed a metric called a “Climate Normal.” A Climate Normal characterizes aspects of earth’s climate—its long-term weather—over a span of 30 years. One important metric is ocean temperature.
 
-- In `1.sql`, write a SQL query to find the normal ocean surface temperature in the Gulf of Maine, off the coast of Massachusetts. To find this temperature, look at the data associated with 42.5° of latitude and -69.5° of longitude.
-    - Recall that you can find the normal ocean surface temperature in the `0m` column, which stands for 0 meters of depth!
-- In `2.sql`, write a SQL query to find the normal temperature of the deepest sensor near the Gulf of Maine, at the same coordinate above.
-The deepest sensor records temperatures at 225 meters of depth, so you can find this data in the `225m` column.
-- In `3.sql`, choose a location of your own and write a SQL query to find the normal temperature at 0 meters, 100 meters, and 200 meters. You might find Google Earth helpful if you’d like to find some coordinates to use!
-- In `4.sql`, write a SQL query to find the lowest normal ocean surface temperature.
-- In `5.sql`, write a SQL query to find the highest normal ocean surface temperature.
-- In `6.sql`, write a SQL query to return all normal ocean temperatures at 50m of depth, as well as their respective degrees of latitude and longitude, within the Arabian Sea. Include latitude, longitude, and temperature columns. For simplicity, assume the Arabian Sea is encased in the following four coordinates:
-    - 20° of latitude, 55° of longitude
-    - 20° of latitude, 75° of longitude
-    - 0° of latitude, 55° degrees of longitude
-    - 0° of latitude, 75° degrees of longitude
-- In `7.sql`, write a SQL query to find the average ocean surface temperature, rounded to two decimal places, along the equator. Call the resulting column “Average Equator Ocean Surface Temperature”.
-    - The equator’s ocean surface temperatures can be found at all longitudes between the latitudes -0.5° and 0.5°, inclusive.
-- In `8.sql`, write a SQL query to find the 10 locations with the lowest normal ocean surface temperature, sorted coldest to warmest. If two locations have the same normal ocean surface temperature, sort by latitude, smallest to largest. Include latitude, longitude, and surface temperature columns.
-- In `9.sql`, write a SQL query to find the 10 locations with the highest normal ocean surface temperature, sorted warmest to coldest. If two locations have the same normal ocean surface temperature, sort by latitude, smallest to largest. Include latitude, longitude, and surface temperature columns.
-- There are 180 whole degrees of latitude. In `10.sql`, write a SQL query to determine how many points of latitude we have at least one data point for. (Why might we not have data points for all latitudes?)
+In a database called `normals.db`, using a table called `normals`, explore some of the most recent Climate Normal data to understand what makes a normal ocean temperature around the world.
 
 ### [Players](Problem_Set_0/players/)
-- In `1.sql`, write a SQL query to find the hometown (including city, state, and country) of Jackie Robinson.
-- In `2.sql`, write a SQL query to find the side (e.g., right or left) Babe Ruth hit.
-- In `3.sql`, write a SQL query to find the ids of rows for which a value in the column `debut` is missing.
-- In `4.sql`, write a SQL query to find the first and last names of players who were not born in the United States. Sort the results alphabetically by first name, then by last name.
-- In `5.sql`, write a SQL query to return the first and last names of all right-handed batters. Sort the results alphabetically by first name, then by last name.
-- In `6.sql`, write a SQL query to return the first name, last name, and debut date of players born in Pittsburgh, Pennsylvania (PA). Sort the results first by debut date—from most recent to oldest—then alphabetically by first name, followed by last name.
-- In `7.sql`, write a SQL query to count the number of players who bat (or batted) right-handed and throw (or threw) left-handed, or vice versa.
-- In `8.sql`, write a SQL query to find the average height and weight, rounded to two decimal places, of baseball players who debuted on or after January 1st, 2000. Return the columns with the name “Average Height” and “Average Weight”, respectively.
-- In `9.sql`, write a SQL query to find the players who played their final game in the MLB in 2022. Sort the results alphabetically by first name, then by last name.
-- In `10.sql`, write SQL query to answer a question of your choice. This query should:
-    - Make use of `AS` to rename a column
-    - Involve at least condition, using `WHERE`
-    - Sort by at least one column using `ORDER BY`
+If you’re not familiar, baseball is a popular sport in which two teams of 9 players take turns batting (hitting a ball) and fielding (catching and throwing hit balls). Points (“runs”) are scored when a hitting team’s player hits a ball and eventually touches all bases before the fielding team’s players have the chance to get them “out.” Baseball is arguably most popular in the United States and Canada, where the MLB (Major League Baseball) has served as the professional association for players since 1876.
 
-Feeling more comfortable?
-You can optionally attempt the below queries, which may require some advanced knowledge!
-- Write a single SQL query to list the first and last names of all players of above average height, sorted tallest to shortest, then by first and last name.
+In a database called `players.db`, using a table called `players`, answer questions about MLB players who’ve played from 1871 to 2023.
