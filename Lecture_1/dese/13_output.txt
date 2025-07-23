@@ -1,0 +1,42 @@
++-----------------------------------------------------------------------------------+-----------+
+|                                       name                                        | graduated |
++-----------------------------------------------------------------------------------+-----------+
+| Academy Of the Pacific Rim Charter Public School                                  | 93.2      |
+| Advanced Math and Science Academy Charter School                                  | 98.6      |
+| Belmont High                                                                      | 99.7      |
+| Tahanto Regional High                                                             | 100       |
+| Blackstone Valley                                                                 | 99.7      |
+| Blue Hills Regional Vocational Technical                                          | 98.5      |
+| Another Course To College                                                         | 92.1      |
+| Boston Latin Academy                                                              | 97.9      |
+| O'Bryant School of Math & Science                                                 | 100       |
+| Quincy Upper School                                                               | 91.5      |
+| Cohasset High School                                                              | 100       |
+| Community Charter School of Cambridge                                             | 90.9      |
+| Concord Carlisle High                                                             | 98.7      |
+| Dover-Sherborn Regional High                                                      | 97.1      |
+| Edward M. Kennedy Academy for Health Careers: A Horace Mann Charter Public School | 98.9      |
+| Excel Academy Charter School                                                      | 99.4      |
+| Francis W. Parker Charter Essential School                                        | 91.7      |
+| Global Learning Charter Public School                                             | 100       |
+| Groton Dunstable Regional                                                         | 99.5      |
+| Hanover High                                                                      | 99.5      |
+| Bromfield                                                                         | 100       |
+| Hopkinton High                                                                    | 99.7      |
+| Ipswich High                                                                      | 94.2      |
+| Lenox Memorial High                                                               | 96.7      |
+| Center For Technical Education Innovation                                         | 96.4      |
+| Lynnfield High                                                                    | 98.8      |
+| Ma Academy for Math and Science School                                            | 98        |
+| New Heights Charter School of Brockton                                            | 92.9      |
+| Pioneer Charter School of Science                                                 | 98        |
+| Pioneer Charter School of Science II                                              | 98        |
+| Pioneer Valley Regional                                                           | 100       |
+| Salem Academy Charter School                                                      | 98.3      |
+| Sizer School: A North Central Charter Essential School                            | 100       |
+| Gateway to College at Springfield Technical Community College                     | 90.9      |
+| Upper Cape Cod Vocational Technical                                               | 100       |
+| Weston High                                                                       | 100       |
+| Westwood High                                                                     | 98.4      |
+| University Pk Campus School                                                       | 97.4      |
++-----------------------------------------------------------------------------------+-----------+
