@@ -19,3 +19,31 @@ In a database called `normals.db`, using a table called `normals`, explore some 
 If you’re not familiar, baseball is a popular sport in which two teams of 9 players take turns batting (hitting a ball) and fielding (catching and throwing hit balls). Points (“runs”) are scored when a hitting team’s player hits a ball and eventually touches all bases before the fielding team’s players have the chance to get them “out.” Baseball is arguably most popular in the United States and Canada, where the MLB (Major League Baseball) has served as the professional association for players since 1876.
 
 In a database called `players.db`, using a table called `players`, answer questions about MLB players who’ve played from 1871 to 2023.
+
+## Week 1 Relating
+### [Packages, Please](Problem_Set_1/packages/)
+You are a mail clerk for the city of Boston and, as such, you oversee the delivery of mail across the city. For the most part, all packages sent are eventually delivered. Except, every once in while, a mystery falls into your lap: a missing package! For each customer that comes to you with a report of a missing package, your job is to determine:
+
+- The current address (or location!) of their missing package
+- The type of address or location (e.g. residential, business, etc.)
+- The contents of the package
+All you know is what the customers themselves will tell you. To solve each mystery, you’ll need to use the mail delivery service’s database, `packages.db`, which contains data on the transit of packages around the city. Using just the information in the database, your task is to help each customer find their missing package.
+
+### [DESE](Problem_Set_1/dese/)
+You just landed a new job as a data analyst for the State of Massachusetts, working within the Department of Elementary and Secondary Education (or DESE, for short!). DESE oversees the state’s public education system. One responsibility of DESE is to ensure every child has a quality education—one in which they encounter experienced teachers, have access to an abundance of resources, and ultimately graduate having met all requirements of the state. Your SQL skills have a part to play in these lofty goals!
+
+In a database called `dese.db`, answer questions about the state of education in Massachusetts.  
+### [Moneyball](Problem_Set_1/moneyball/)
+The year is 2001. You’ve been hired to help make the most of the Oakland Athletics baseball team’s dwindling player budget. Each year, teams like the “A’s” hire new baseball players. Unfortunately, you’re low on star players—and on funds. Though, with a bit of SQL and some luck, who says you can’t still create a team that defies expectations?
+
+Given a database called `moneyball.db`—one that contains information on players, their performances, and their salaries—help the Oakland Athletics find the value in players others might miss.  
+
+## Week 2 Designing
+### [ATL](Problem_Set_2/atl/)
+
+
+### [Happy to Connect](Problem_Set_2/connect/)
+
+
+### [Union Square Donuts](Problem_Set_2/donuts/)
+
