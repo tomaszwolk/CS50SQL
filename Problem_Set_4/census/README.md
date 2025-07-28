@@ -53,15 +53,21 @@ In `most_populated.sql`, write a SQL statement to create a view named `most_popu
 
 ## Usage
 To test your views as you write them in your `.sql` files, you can run a query on the database by running
-```
+
+```sql
 .read FILENAME
 ```
+
 where `FILENAME` is the name of the file containing your SQL query. For example,
-```
+
+```sql
 .read rural.sql
 ```
+
 Keep in mind you can also use
-```
+
+```sql
 DROP VIEW name;
 ```
+
 where `name` is the name of your view, to remove a view before creating it anew.
