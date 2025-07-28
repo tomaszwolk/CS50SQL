@@ -28,11 +28,15 @@ Clock’s ticking!
 
 ## Usage
 To test your hack as you write it in your `hack.sql` files, you can query the database by running
-```
+
+```sql
 .read hack.sql
 ```
+
 If you need to reset the database at any time, you can run
-```
+
+```sql
 .read reset.sql
 ```
+
 to return the database to its original form.
