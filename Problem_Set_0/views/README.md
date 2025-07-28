@@ -1,10 +1,10 @@
-## 36 Views
-### Problem to Solve
+# 36 Views
+## Problem to Solve
 From 1830 to 1832, the Japanese artist Katsushika Hokusai created 36 woodblock prints depicting 36 different views of Mount Fuji, a volcano on the Honshū island of Japan. Among the series’ most famous works are Fine Wind, Clear Morning and The Great Wave off Kanagawa. The prints became so influential that another Japanese artist of the time period—Utagawa Hiroshige—created his own series of 36 prints, each depicting a new view of Fuji.
 
 In `views.db`, you’ll find details on the 36 prints created, respectively, by Hokusai and Hiroshige. In total, you’ll have data on 72 prints. Prints like these tend to be appreciated for their aesthetics, not their statistics, but computer science now helps create additional numeric insights about artwork. In addition to each print’s title and author, you’ll find some statistics commonly used in computational image analysis: the print’s average color, its brightness, its contrast, and its entropy. In the accompanying `.sql` files, write SQL queries to answer questions about this database of 72 prints and the statistics about their composition.
 
-### Schema
+## Schema
 In `views.db` you’ll find a single table, `views`. In the `views` table, you’ll find the following columns:
 
 - `id`, which uniquely identifies each row (print) in the table
@@ -17,7 +17,7 @@ In `views.db` you’ll find a single table, `views`. In the `views` table, you�
 - `contrast`, which is a number representing the extent of the difference between light and dark areas of the image
 - `entropy`, which is a measure used to quantify the complexity of the artwork
 
-### Specification
+## Specification
 For each of the following questions, you should write a single SQL query that outputs the results specified by each problem. Your response must take the form of a single SQL query. You should not assume anything about the ids of any particular observations: your queries should be accurate even if the `id` of any particular observation were different. Finally, each query should return only the data necessary to answer the question.
 
 - In `1.sql`, write a SQL query that a translator might take interest in: list, side by side, the Japanese title and the English title for each print. Ensure the Japanese title is the first column, followed by the English title.
@@ -34,7 +34,7 @@ For each of the following questions, you should write a single SQL query that ou
   - Involve at least one condition, using `WHERE`  
   - Sort by at least one column, using `ORDER BY`  
 
-###  How to Test
+##  How to Test
 While `check50` is available for this problem, you’re encouraged to instead test your code on your own for each of the following. If you’re using the `views.db` database provided in this problem’s distribution, you should find that…
 
 - Executing `1.sql` results in a table with 2 columns and 72 rows.

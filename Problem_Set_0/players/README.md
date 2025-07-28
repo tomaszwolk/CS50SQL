@@ -1,10 +1,10 @@
-## Players
-### Problem to Solve
+# Players
+## Problem to Solve
 If you’re not familiar, baseball is a popular sport in which two teams of 9 players take turns batting (hitting a ball) and fielding (catching and throwing hit balls). Points (“runs”) are scored when a hitting team’s player hits a ball and eventually touches all bases before the fielding team’s players have the chance to get them “out.” Baseball is arguably most popular in the United States and Canada, where the MLB (Major League Baseball) has served as the professional association for players since 1876.
 
 In a database called `players.db`, using a table called `players`, answer questions about MLB players who’ve played from 1871 to 2023.
 
-### Schema
+## Schema
 In `players.db` you’ll find a single table, `players`. In the `players` table, you’ll find the following columns:
 
 - `id`, which uniquely identifies each row (player) in the table
@@ -23,7 +23,7 @@ In `players.db` you’ll find a single table, `players`. In the `players` table,
 - `birth_state`, which is the state in which the player was born
 - `birth_country`, which is the country in which the player was born
 
-### Specification
+## Specification
 - In `1.sql`, write a SQL query to find the hometown (including city, state, and country) of Jackie Robinson.
 - In `2.sql`, write a SQL query to find the side (e.g., right or left) Babe Ruth hit.
 - In `3.sql`, write a SQL query to find the ids of rows for which a value in the column `debut` is missing.
@@ -42,7 +42,7 @@ Feeling more comfortable?
 You can optionally attempt the below queries, which may require some advanced knowledge!
 - Write a single SQL query to list the first and last names of all players of above average height, sorted tallest to shortest, then by first and last name.
 
-### How to Test
+## How to Test
 While check50 is available for this problem, you’re encouraged to instead test your code on your own for each of the following. If you’re using the players.db database provided in this problem’s distribution, you should find that…
 
 - Executing `1.sql` results in a table with 3 columns and 1 row.

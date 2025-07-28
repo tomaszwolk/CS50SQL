@@ -1,10 +1,10 @@
-## Moneyball
-### Problem to Solve
+# Moneyball
+## Problem to Solve
 The year is 2001. You’ve been hired to help make the most of the Oakland Athletics baseball team’s dwindling player budget. Each year, teams like the “A’s” hire new baseball players. Unfortunately, you’re low on star players—and on funds. Though, with a bit of SQL and some luck, who says you can’t still create a team that defies expectations?
 
 Given a database called `moneyball.db`—one that contains information on players, their performances, and their salaries—help the Oakland Athletics find the value in players others might miss.  
 
-### Schema
+## Schema
 `moneyball.db` represents all of Major League Baseball’s players, teams, salaries, and performances up until 2001. In particular, `moneyball.db` represents the following entities:
 
 - A player, which includes anyone who’s played Major League Baseball for any amount of time
@@ -81,7 +81,7 @@ The `salaries` table contains the following columns:
 - `salary`, which is the salary itself in US dollars (not adjusted for inflation)
 </details>
 
-### Specification
+## Specification
 `1.sql`  
 You should start by getting a sense for how average player salaries have changed over time. In ``1.sql``, write a SQL query to find the average player salary by year.
 
@@ -174,7 +174,7 @@ Hits are great, but so are RBIs! In `12.sql`, write a SQL query to find the play
 - Order your results by player ID, least to greatest (or alphabetically by last name, as both are the same in this case!).
 - Keep in mind the lessons you’ve learned in `10.sql` and `11.sql`!
 
-### How to Test
+## How to Test
 While `check50` is available for this problem, you’re encouraged to instead test your code on your own for each of the following. If you’re using the `moneyball.db` database provided in this problem’s distribution, you should find that…
 
 - Executing `1.sql` results in a table with 2 columns and 17 rows.

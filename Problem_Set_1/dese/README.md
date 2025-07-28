@@ -1,10 +1,10 @@
-## DESE  
-### Problem to Solve
+# DESE  
+## Problem to Solve
 You just landed a new job as a data analyst for the State of Massachusetts, working within the Department of Elementary and Secondary Education (or DESE, for short!). DESE oversees the state’s public education system. One responsibility of DESE is to ensure every child has a quality education—one in which they encounter experienced teachers, have access to an abundance of resources, and ultimately graduate having met all requirements of the state. Your SQL skills have a part to play in these lofty goals!
 
 In a database called `dese.db`, answer questions about the state of education in Massachusetts.
 
-### Schema
+## Schema
 In Massachusetts, public education is delegated to districts, a type of school government often associated with an individual town. These districts, in turn, contain many individual schools. Consider the entity relationship diagram below, which codifies the relationship between districts, schools, and other data DESE collects.  
 ![dese](image.png)  
 Within `dese.db`, you’ll find several tables that implement the relationships described in the diagram above. Click the drop-downs below to learn more about the schema of each individual table.
@@ -68,7 +68,7 @@ The `staff_evaluations` table contains the following columns:
 </details>
 You might (cleverly!) note that some of these relationships could be implemented with a single table. You’d be correct, though in this case, you’ll simply have to work with what your colleagues at DESE created!
 
-### Specification
+## Specification
 For each of the following questions, you should write a single SQL query that outputs the results specified by each problem. Your response must take the form of a single SQL query. You should not assume anything about the `id`s of any particular rows: your queries should be accurate even if the `id`s were different. Finally, each query should return only the data necessary to answer the question.
 
 `1.sql`  
@@ -118,11 +118,13 @@ A parent asks you for advice on finding the best public school districts in Mass
 <summary>Hint</summary>
 You might find it helpful to know that subqueries can be inserted into most any part of a SQL query, including conditions. For instance, the following is valid SQL syntax:   
 
-`SELECT "column" FROM "table"
+```
+SELECT "column" FROM "table"
 WHERE "column" > (
     SELECT AVG("column")
     FROM "table"
-);`  
+);
+````
 </details>
 
 `13.sql`  
