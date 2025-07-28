@@ -45,8 +45,11 @@ Your task at hand is to decode the cipher left for you by the detective. How you
 
 - The view should be named `message`
 - The view should have a single column, `phrase`
-- When the following SQL query is executed on `private.db`, your view should return a single column in which each row is one phrase in the message.  
-```SELECT "phrase" FROM "message";```
+- When the following SQL query is executed on `private.db`, your view should return a single column in which each row is one phrase in the message.
+
+```sql
+SELECT "phrase" FROM "message";
+```
 
 In `private.sql`, you should write all SQL statements required to replicate your creation of the view. That is:
 
