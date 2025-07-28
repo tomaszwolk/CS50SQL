@@ -26,7 +26,7 @@ When you download the distribution code for this problem, you should notice a fi
 
 At first, `Hack.java` should only include the following:
 
-```
+```java
 public class Hack {
     public static void main(String[] args) throws Exception {
         System.out.println("Hacked!");
@@ -36,13 +36,13 @@ public class Hack {
 
 To run this Java program, ensure that—when you type `ls`—you see `Hack.java` among the files in your current directory. Then, execute the below in your terminal:
 
-```
+```java
 javac Hack.java
 ```
 
 `javac` compiles the program in `Hack.java` to a file named `Hack.class`. To compile a program means to translate a program from one language to another—in this case, from Java source code (the code you wrote yourself!) to Java “bytecode” (the code understandable to the the `java` program on your computer). You should then see a new file named `Hack.class`. Execute the following to run `Hack.class`, the compiled program:
 
-```
+```java
 java Hack
 ```
 
@@ -61,7 +61,7 @@ Java’s standard SQL package provides you with a few tools to translate stateme
 
 To include these tools in your program, add the following `import` statements:
 
-```
+```java
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
@@ -78,7 +78,7 @@ Try recompiling your Java program, as with `javac Hack.java`, and running it, as
 ### Connecting to a Database
 As mentioned before, you can use `DriverManager` to establish a connection to `dont-panic.db`. To do so, replace `System.out.println("Hacked!");` with the below:
 
-```
+```java
 Connection sqliteConnection = DriverManager.getConnection("jdbc:sqlite:dont-panic.db");
 ```
 
@@ -90,7 +90,7 @@ This line of Java code is composed of a few pieces:
 
 Your program should now look as follows:
 
-```
+```java
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
@@ -104,7 +104,7 @@ public class Hack {
 
 However, if you run `javac Hack.java` and `java Hack` to compile and run your updated program, you might encounter an error:
 
-```
+```java
 Exception in thread "main" java.sql.SQLException: No suitable driver found for jdbc:sqlite:dont-panic.db
         at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:708)
         at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:253)
@@ -117,7 +117,7 @@ To fix this issue, you’ll need to add the Java SQLite driver to your project. 
 
 Compile your program as usual with `javac Hack.java`. But instead of running `java Hack`, execute the following:
 
-```
+```java
 java -cp .:sqlite-jdbc-3.43.0.0.jar Hack
 ```
 
@@ -137,7 +137,7 @@ Once you’ve created a connection to a database, you can start executing SQL st
 
 Here’s how you can set up and execute an `UPDATE` statement:
 
-```
+```java
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
@@ -174,7 +174,7 @@ Recall from lecture that a prepared statement is a SQL query with placeholders f
 
 The `java.sql` package supports using prepared statements. First, replace importing `java.sql.Statement` with importing `java.sql.PreparedStatement` and write your query with a `?` as a placeholder:
 
-```
+```java
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -196,7 +196,7 @@ public class Hack {
 
 Next, use the `prepareStatement` and `setString` methods to substitute some value for that placeholder.
 
-```
+```java
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -222,7 +222,7 @@ public class Hack {
 
 And finally, consider what you could do to get user input. While we won’t dive into all the details of how to collect user input with Java, suffice to say that the following should work!
 
-```
+```java
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
