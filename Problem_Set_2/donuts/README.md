@@ -54,13 +54,17 @@ Your database should be able to represent…
 
 ## Usage
 To create a database from your schema, within your `donuts` folder, type
-```
+
+```sql
 sqlite3 donuts.db
 ```
+
 The above will create an empty SQLite database called `donuts.db`.  
 Then, in the `sqlite3` prompt, type
-```
+
+```sql
 .read schema.sql
 ```
+
 to read the statements from `schema.sql`.  
 Recall you can use `DROP TABLE tablename`, where `tablename` is the name of your table, to delete a table from your database.
