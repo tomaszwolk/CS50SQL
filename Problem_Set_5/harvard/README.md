@@ -11,6 +11,7 @@ Within `harvard.db`, you’ll find five tables that implement the relationships 
 
 <details>
 <summary>students table</summary>
+    
 The `students` table contains the following columns:
 
 - `id`, which is the student’s ID.
@@ -19,6 +20,7 @@ The `students` table contains the following columns:
 
 <details>
 <summary>courses table</summary>
+    
 The `courses` table contains the following columns:
 
 - `id`, which is the courses’s ID.
@@ -30,6 +32,7 @@ The `courses` table contains the following columns:
 
 <details>
 <summary>enrollments table</summary>
+    
 The `enrollments` table contains the following columns:
 
 - `id`, which is the ID to identify the enrollment.
@@ -39,6 +42,7 @@ The `enrollments` table contains the following columns:
 
 <details>
 <summary>requirements table</summary>
+    
 The `requirements` table contains the following columns:
 
 - `id`, which is the ID of the requirement.
@@ -47,7 +51,8 @@ The `requirements` table contains the following columns:
 
 <details>
 <summary>satisfies table</summary>
-The satisfies table contains the following columns:
+    
+The `satisfies` table contains the following columns:
 
 - `id`, which is the ID of the course-requirement pair.
 - `course_id`, which is the ID of a given course.
@@ -64,7 +69,7 @@ When engineers optimize a database, they often care about the typical queries ru
 
 - Find a student’s historical course enrollments, based on their ID:
 
-```
+```sql
 SELECT "courses"."title", "courses"."semester"
 FROM "enrollments"
 JOIN "courses" ON "enrollments"."course_id" = "courses"."id"
@@ -74,7 +79,7 @@ WHERE "students"."id" = 3;
 
 - Find all students who enrolled in Computer Science 50 in Fall 2023:
 
-```
+```sql
 SELECT "id", "name"
 FROM "students"
 WHERE "id" IN (
@@ -92,7 +97,7 @@ WHERE "id" IN (
 
 - Sort courses by most- to least-enrolled in Fall 2023:
 
-```
+```sql
 SELECT "courses"."id", "courses"."department", "courses"."number", "courses"."title", COUNT(*) AS "enrollment"
 FROM "courses"
 JOIN "enrollments" ON "enrollments"."course_id" = "courses"."id"
@@ -103,7 +108,7 @@ ORDER BY "enrollment" DESC;
 
 - Find all computer science courses taught in Spring 2024:
 
-```
+```sql
 SELECT "courses"."id", "courses"."department", "courses"."number", "courses"."title"
 FROM "courses"
 WHERE "courses"."department" = 'Computer Science'
@@ -112,7 +117,7 @@ AND "courses"."semester" = 'Spring 2024';
 
 - Find the requirement satisfied by “Advanced Databases” in Fall 2023:
 
-```
+```sql
 SELECT "requirements"."name"
 FROM "requirements"
 WHERE "requirements"."id" = (
@@ -129,7 +134,7 @@ WHERE "requirements"."id" = (
 
 - Find how many courses in each requirement a student has satisfied:
 
-```
+```sql
 SELECT "requirements"."name", COUNT(*) AS "courses"
 FROM "requirements"
 JOIN "satisfies" ON "requirements"."id" = "satisfies"."requirement_id"
@@ -143,7 +148,7 @@ GROUP BY "requirements"."name";
 
 - Search for a course by title and semester:
 
-```
+```sql
 SELECT "department", "number", "title"
 FROM "courses"
 WHERE "title" LIKE "History%"
@@ -162,7 +167,7 @@ Begin by assessing where best to create indexes by understanding the plan for ea
 
 For example, try revealing the plan for the first typical query, as by executing the following:
 
-```
+```sql
 EXPLAIN QUERY PLAN
 SELECT "courses"."title", "courses"."semester"
 FROM "enrollments"
@@ -173,7 +178,7 @@ WHERE "students"."id" = 3;
 
 The output of the above is as follows:
 
-```
+```sql
 QUERY PLAN
 |--SEARCH students USING INTEGER PRIMARY KEY (rowid=?)
 |--SCAN enrollments
@@ -196,15 +201,20 @@ Keep in mind that indexes take up additional space, and that they can slow `INSE
 
 Through the iterative process above, you’ll refine the indexes you’ve chosen to create.
 </details>
+
 ## Usage
 To load your indexes as you write them in `indexes.sql`, you can use
-```
+
+```sql
 .read indexes.sql
 ```
+
 Keep in mind you can also use
-```
+
+```sql
 DROP INDEX name;
 ```
+
 where `name` is the name of your index, to remove an index before creating it anew.
 
 You may want to use `VACUUM` to free up disk space after you delete an index!
