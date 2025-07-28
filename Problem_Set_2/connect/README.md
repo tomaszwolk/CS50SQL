@@ -70,14 +70,18 @@ Your database should be able to represent…
 
 ## Usage
 To create a database from your schema, within your `connect` folder, type
-```
+
+```sql
 sqlite3 connect.db
 ```
+
 The above will create an empty SQLite database called `connect.db`.  
 Then, in the `sqlite3` prompt, type
-```
+
+```sql
 .read schema.sql
 ```
+
 to read the statements from `schema.sql`.
 
 Recall you can use `DROP TABLE tablename`, where `tablename` is the name of your table, to delete a table from your database.
