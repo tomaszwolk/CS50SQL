@@ -11,6 +11,7 @@ Within `bnb.db`, you’ll find three tables that implement the relationships des
 
 <details>
 <summary>listings table</summary>
+  
 The `listings` table contains the following columns:
 
 - `id`, which is the ID of the listing.
@@ -23,6 +24,7 @@ The `listings` table contains the following columns:
 
 <details>
 <summary>reviews table</summary>
+  
 The `reviews` table contains the following columns:
 
 - `id`, which is the ID of the review.
@@ -34,6 +36,7 @@ The `reviews` table contains the following columns:
 
 <details>
 <summary>availabilities table</summary>
+  
 The `availabilities` table contains the following columns:
 
 - `id`, which is the id of the availability.
@@ -48,9 +51,11 @@ In each of the corresponding `.sql` files, write a SQL statement to create each 
 
 ### No Descriptions
 You might notice that when running
-```
+
+```sql
 SELECT * FROM "listings" LIMIT 5;
 ```
+
 the results look quite wonky! The `description` column contains descriptions with many line breaks, each of which are printed to your terminal.
 
 In `no_descriptions.sql`, write a SQL statement to create a view named `no_descriptions` that includes all of the columns in the `listings` table except for `description`.
@@ -91,15 +96,21 @@ In `june_vacancies.sql`, write a SQL statement to create a view named `june_vaca
 
 ## Usage
 To test your views as you write them in your `.sql` files, you can run a query on the database by running
-```
+
+```sql
 .read FILENAME
 ```
+
 where `FILENAME` is the name of the file containing your SQL query. For example,
-```
+
+```sql
 .read no_descriptions.sql
 ```
+
 Keep in mind you can also use
-```
+
+```sql
 DROP VIEW name;
 ````
+
 where name is the name of your view, to remove a view before creating it anew.
