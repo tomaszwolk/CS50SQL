@@ -11,7 +11,7 @@ Each row of data sent to the surface by AquaByte is tagged with a primary key: i
 
 ## Collecting Observations
 For simplicity, suppose AquaByte sent the following 6 observations over the course of November 1st, 2023. For the sake of visualization, each observation is denoted by a blue rectangle labeled by its primary key (the timestamp at which the observation was taken).
-![timestamps](image.png)
+![timestamps](image.png)  
 > As a check for understanding, when did most of AquaByte’s observations occur?
 
 <details>
@@ -34,7 +34,7 @@ AquaByte plans to send its six observations to a network of boats on the surface
 
 ### Random Partitioning
 One approach is for AquaByte to randomly send its observations to each boat, as per the below. With the questions below, analyze the technical trade-offs of this design decision.
-![Random partitioning](image-1.png)
+![Random partitioning](image-1.png)  
 
 Consider the following two thought questions. Once you have an idea in your head, choose the answer that best corresponds to your thinking by clicking the appropriate dropdown.
 
@@ -72,7 +72,7 @@ Suppose, for the reasons you’ve written, the AquaByte team decides not to have
 - Boat C will receive all observations within the hours of 16–23 (i.e., 4:00 PM to 11:59 PM), inclusive.
 
 With the questions below, analyze the technical trade-offs of this design decision.
-![Partitioning by hour](image-2.png)
+![Partitioning by hour](image-2.png)  
 Consider the following two thought questions. Once you have an idea in your head, choose the answer that best corresponds to your thinking by clicking the appropriate dropdown.
 
 > Will the observations likely be evenly distributed across all boats, even if AquaByte most commonly collects observations between midnight and 1am? Why or why not?
@@ -117,7 +117,7 @@ For instance, suppose the team develops a hash function that assigns a value bet
 - The algorithm computes the hash value 1200 for `2023-11-01 00:00:04.127`.
 
 Importantly, the hash function is consistent: it will always compute the same hash value when given the same timestamp. The hash function also distributes timestamps evenly across all possible hash values: that is, a single observation is no more likely to be assigned one hash value than another. With the questions below, analyze the technical trade-offs of this design decision.
-![Partitioning by Hash Value](image-3.png)
+![Partitioning by Hash Value](image-3.png)  
 Consider the following three thought questions. Once you have an idea in your head, choose the answer that best corresponds to your thinking by clicking the appropriate dropdown.
 > Will the observations likely be evenly distributed across all boats, even if AquaByte most commonly collects observations between midnight and 1am? Why or why not?
 
