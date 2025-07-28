@@ -11,6 +11,7 @@ Within `snap.db`, you’ll find three tables that implement the relationships de
 
 <details>
 <summary>users table</summary>
+    
 The `users` table contains the following columns:
 
 - `id`, which is the user’s ID.
@@ -22,6 +23,7 @@ The `users` table contains the following columns:
 
 <details>
 <summary>friends table</summary>
+    
 The `friends` table contains the following columns:
 
 - `user_id`, which is the ID of a given user.
@@ -38,6 +40,7 @@ For each row, the user in the `user_id` column counts the user in the `friend_id
 
 <details>
 <summary>messages table</summary>
+    
 The `messages` table contains the following columns:
 
 - `id`, which is the ID of the message.
@@ -56,7 +59,8 @@ If feeling unsure how to interpret the output of `EXPLAIN QUERY PLAN`, see the A
 
 `1.sql`
 The app’s user engagement team needs to identify active users. Find all usernames of users who have logged in since 2024-01-01. Ensure your query uses the `search_users_by_last_login` index, which is defined as follows:
-```
+
+```sql
 CREATE INDEX "search_users_by_last_login"
 ON "users"("last_login_date");
 ```
@@ -70,7 +74,8 @@ Ensure your query uses the index automatically created on the primary key column
 The app needs to rank a user’s “best friends,” similar to Snapchat’s “Friend Emojis” feature. Find the user IDs of the top 3 users to whom `creativewisdom377` sends messages most frequently. Order the user IDs by the number of messages `creativewisdom377` has sent to those users, most to least.
 
 Ensure your query uses the `search_messages_by_from_user_id` index, which is defined as follows:
-```
+
+```sql
 CREATE INDEX "search_messages_by_from_user_id"
 ON "messages"("from_user_id");
 ```
@@ -79,7 +84,8 @@ ON "messages"("from_user_id");
 The app needs to send users a summary of their engagement. Find the username of the most popular user, defined as the user who has had the most messages sent to them.
 
 Ensure your query uses the `search_messages_by_to_user_id` index, which is defined as follows:
-```
+
+```sql
 CREATE INDEX "search_messages_by_to_user_id"
 ON "messages"("to_user_id");
 ```
@@ -99,13 +105,14 @@ Recall that, in SQL, you can use certain keywords to find the intersection of tw
 <summary>Use EXPLAIN QUERY PLAN to show a query's steps</summary>
 To check the results of `EXPLAIN QUERY PLAN`, you need simply prepend `EXPLAIN QUERY PLAN` to your query:
 
-```
+```sql
 EXPLAIN QUERY PLAN
 SELECT "username"
 FROM "users"
 WHERE "id" = 151;
 ```
 </details>
+
 <details>
 <summary>Interpret the results of EXPLAIN QUERY PLAN</summary>
 
@@ -118,7 +125,8 @@ Recall from lecture that `EXPLAIN QUERY PLAN` displays the steps the SQLite data
 Below are some examples of the results of `EXPLAIN QUERY PLAN`, from queries that use an index in at least one step of their execution:
 
 # Example 1
-```
+
+```sql
 QUERY PLAN
 `--SEARCH users USING INDEX search_users_by_last_login (last_login_date>?)
 ```
@@ -126,7 +134,8 @@ QUERY PLAN
 Notice that this query can be executed in a single step, by searching the index `search_users_by_last_login`.
 
 # Example 2
-```
+
+```sql
 QUERY PLAN
 |--SEARCH messages USING COVERING INDEX search_messages_by_to_user_id (to_user_id=?)
 `--SCALAR SUBQUERY 1
@@ -139,7 +148,8 @@ Notice that this query requires two steps:
 2. The second resolves a subquery by searching the index `sqlite_autoindex_users_1`.
 
 # Example 3
-```
+
+```sql
 QUERY PLAN
 |--SEARCH messages USING INDEX search_messages_by_from_user_id (from_user_id=?)
 |--SCALAR SUBQUERY 1
@@ -155,7 +165,8 @@ Notice that this query involves several steps, and that it uses indexes to accom
 3. The final steps use temporary B-trees to group and order the results.
 
 # Example 4
-```
+
+```sql
 QUERY PLAN
 |--SEARCH users USING INTEGER PRIMARY KEY (rowid=?)
 `--SCALAR SUBQUERY 1
@@ -170,7 +181,8 @@ Notice that this query involves several steps, and that it uses indexes to accom
 3. The final step uses a temporary B-tree to order the results.
 
 # Example 5
-```
+
+```sql
 QUERY PLAN
 `--COMPOUND QUERY
    |--LEFT-MOST SUBQUERY
