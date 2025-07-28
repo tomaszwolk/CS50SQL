@@ -83,13 +83,13 @@ Your database should be able to represent…
 ### Usage
 To use `mysql`, you first need to start a MySQL server, as with:
 
-```
+```sql
 docker container run --name mysql -p 3306:3306 -v /workspaces/$RepositoryName:/mnt -e MYSQL_ROOT_PASSWORD=crimson -d mysql
 ```
 
 You can then connect to the server with:
 
-```
+```sql
 mysql -h 127.0.0.1 -P 3306 -u root -p
 ```
 
@@ -97,13 +97,13 @@ Type crimson as your password.
 
 If this is your first time logging into your `mysql` server, you’ll need to create a new database on the server. At your `mysql>` prompt, try the following:
 
-```
+```sql
 CREATE DATABASE `linkedin`;
 ```
 
 You should see something along the lines of “Query OK, 1 row affected.” Afterwards, to ensure your future SQL statements are run on your new `linkedin` database, execute the following:
 
-```
+```sql
 USE `linkedin`;
 ```
 
