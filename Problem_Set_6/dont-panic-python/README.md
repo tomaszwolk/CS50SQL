@@ -26,13 +26,14 @@ Clock’s ticking!
 When you download the distribution code for this problem, you should notice a file named `hack.py`. You can tell this program is a Python program because it ends with `.py`. The `.py` extension identifies files as Python files much like how the `.sql` extension identifies files as a set of SQL statements.
 
 At first, `hack.py` should only include a single line of Python code:
-```
+
+```python
 print("Hacked!")
 ```
 
 To run this Python program, ensure that—when you type `ls`—you see `hack.py` among the files in your current directory. Then, execute the below in your terminal:
 
-```
+```python
 python hack.py
 ```
 
@@ -43,7 +44,7 @@ Now that you’re able to run your Python program, the next step is to connect y
 
 To use the CS50 library’s SQL functionality in your own program, replace `print("Hacked!")` with the below:
 
-```
+```python
 from cs50 import SQL
 ```
 
@@ -51,7 +52,7 @@ This line of Python code says that your program should grab (“import”) tools
 
 With this library now included in your program, establishing a connection to `dont-panic.db` is as simple as one line of Python code:
 
-```
+```python
 from cs50 import SQL
 
 
@@ -70,7 +71,7 @@ Try running your program now. You might not see anything happen and, if so, that
 ### Executing SQL Statements with Python
 The CS50 library for Python’s SQL functionality comes with a method called `execute`. A method receives an input and produces an output. For instance, a method might take a SQL statement as input, execute that SQL statement on a database, and return to you the results of the SQL statement. In fact, that’s exactly what the `execute` method does!
 
-```
+```python
 from cs50 import SQL
 
 
@@ -97,7 +98,7 @@ Recall from lecture that a prepared statement is a SQL query with placeholders f
 
 The CS50 library for Python supports using prepared statements. First, modify your program to take input from the user:
 
-```
+```python
 from cs50 import SQL
 
 
@@ -116,7 +117,7 @@ Notice that if you now run your program, you’re prompted for a password. Whate
 
 Now, modify your SQL query to be a prepared statement. In CS50’s library, you can use a ? to represent a placeholder for a value you’ll supply later.
 
-```
+```python
 from cs50 import SQL
 
 
@@ -133,7 +134,7 @@ db.execute(
 
 The last step, of course, is to tell the `execute` method which value it should substitute for the placeholder. To do that, you can add the value to substitute after the SQL query, separated by a comma:
 
-```
+```python
 from cs50 import SQL
 
 
