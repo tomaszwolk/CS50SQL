@@ -70,7 +70,7 @@ For instance, suppose you have a table called `sentences` which includes the fol
 
 Should you run the following SQL query…
 
-```
+```sql
 SELECT substr("sentence", 1, 2)
 FROM "sentences";
 ```
