@@ -33,7 +33,7 @@ Within `DESIGN.md`, write about your database’s purpose, scope, entities, rela
 Your `DESIGN.md` file should include an entity relationship diagram for your database. You can create your entity relationship diagram any way you’d like, but allow us to suggest a few!
 
 - If you’re the pencil-and-paper type, you can draw your diagram, take a picture, and upload it to your codespace.
-- If you’re digitally inclined, you can use a tool such as the Mermaid.js live editor. Mermaid.js is a toolkit via which you can create and export diagrams (including entity relationship diagrams!). See the documentation to learn the relevant syntax and see examples.
+- If you’re digitally inclined, you can use a tool such as the Mermaid.js [live editor](https://mermaid.live/edit#pako:eNpVjUFvgkAQhf_KZk5tgma1EXAPTRSrF5P24KngYQIjS5RdsiyxFvjvXbBN2znNm_e9eS2kOiMQcLroayrRWHbYJIq5WcWRNEVtS6yPbDJ57nZkWakV3Tq2fthpVktdVYXKH-_8eoBY1O4HjJiVhTr3dysa86-KOraJ91hZXR3_Ooer7thLXLxJ9_6_Iw251DY-oTjhJEXDIjTfyHZsnM3j1Wq8gAe5KTIQ1jTkQUmmxEFCO7gJWEklJSDcmqE5J5Co3mUqVO9alz8xo5tcgmu71E41VYaWNgXmBn8RUhmZSDfKgliMH0C08AFi7vvTZTDzn_yAcx4sAw9uw3XqFJ_xkIf-Igj9ee_B59jJp2Gw6L8Ac-B2yw). Mermaid.js is a toolkit via which you can create and export diagrams (including entity relationship diagrams!). See the documentation to learn the relevant syntax and see examples.
 - You’re also welcome to use any other software that helps you draw the types of shapes you’d like to draw.
 
 When you have an image of your entity relationship diagram, you can embed it in your `DESIGN.md` file using the following syntax:
